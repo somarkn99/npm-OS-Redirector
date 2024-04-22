@@ -1,46 +1,76 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# OS Redirector
 
-## Available Scripts
+A simple React hook to redirect users based on their operating system. This hook detects whether the user is on Android, iOS, or other operating systems and redirects them to specified URLs.
 
-In the project directory, you can run:
+## Installation
 
-### `npm start`
+To install the `os-redirector`, run the following command in your React project:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```bash
+npm install os-redirector
+```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Usage
 
-### `npm test`
+Here is how you can use the `useOSRedirect` hook in your React application:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```jsx
+import React from 'react';
+import useOSRedirect from 'os-redirector';
 
-### `npm run build`
+const App = () => {
+  // URLs to redirect to based on the operating system
+  const androidUrl = "https://play.google.com/store";
+  const iosUrl = "https://www.apple.com/app-store/";
+  const defaultUrl = "/home";
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  useOSRedirect(androidUrl, iosUrl, defaultUrl);
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  return <div>Redirecting...</div>;
+};
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+export default App;
+```
 
-### `npm run eject`
+### Props
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- `androidUrl` (string): URL to redirect to if the user is on an Android device.
+- `iosUrl` (string): URL to redirect to if the user is on an iOS device.
+- `defaultUrl` (string): URL to redirect to if the user is not on Android or iOS.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Contributing
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Contributions are always welcome! Please feel free to submit any issues or pull requests.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## License
 
-## Learn More
+Distributed under the MIT License. See `LICENSE` for more information.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Note :warning:	
+-------
+Not all of these codes have to be from my pure work, there are many of them on the Internet that I may have done some but not limited to some modification, improvement, or modification of the appearance of the code to become readable, understandable or appropriate to the place of use.
+If you have any code you think will be useful and people will use frequently in many projects do not hesitate to do a pull request to this repo.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Let's Connect
+-------
+
+- [Linkedin](https://www.linkedin.com/in/somarkn99/)
+- [website](https://www.somar-kesen.com/)
+- [facebook](https://www.facebook.com/SomarKesen)
+- [instagram](https://www.instagram.com/somar_kn/)
+
+Hire Me :fire:
+-------
+By the way, I'm available to work as freelancer, feel free to communicate with me in order to transform your project from an idea to reality.
+
+You Can contact me for freelancer job vie email :
+```
+freelancer@somar-kesen.com
+```
+
+Security
+--------
+
+If you discover any security related issues, please email them first to contact@somar-kesen.com,
+if we do not fix it within a short period of time please open a new issue describe your problem.

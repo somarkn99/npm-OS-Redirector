@@ -1,34 +1,20 @@
 {
   "name": "os-redirector",
   "version": "0.1.0",
-  "description": "A simple React hook for redirecting users based on their operating system.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "files": [
     "dist"
   ],
-  "scripts": {
-    "build": "tsc -p tsconfig.build.json",
-    "test": "react-scripts test",
-    "prepare": "npm run build"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/yourusername/os-redirector.git"
-  },
-  "keywords": ["react", "redirect", "operating system", "os detection"],
-  "author": "Your Name <your.email@example.com>",
-  "license": "MIT",
   "peerDependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^27.5.2",
-    "@types/node": "^16.18.96",
     "@types/react": "^18.2.79",
     "@types/react-dom": "^18.2.25",
     "typescript": "^4.9.5"
